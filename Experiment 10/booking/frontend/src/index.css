@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    vertical-align: middle;
+  }
+}
+
+@layer utilities {
+  .ambient-shadow {
+    box-shadow: 0 4px 20px rgba(11, 28, 48, 0.05);
+  }
+  
+  .seat-grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  @media (max-width: 768px) {
+    .seat-grid {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+  }
+
+  .ticket-perforation {
+    background-image: radial-gradient(circle at 0px 10px, transparent 10px, white 10px);
+    background-size: 100% 20px;
+  }
+}
